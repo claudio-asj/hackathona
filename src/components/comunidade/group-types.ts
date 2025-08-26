@@ -2,13 +2,7 @@
 
 export interface SocialLink {
   type:
-    | "linkedin"
-    | "dribbble"
     | "instagram"
-    | "twitter"
-    | "youtube"
-    | "github"
-    | "pinterest";
   url: string;
   label?: string;
 }
@@ -47,10 +41,6 @@ export type SupportLink = {
 export type ExternalChannel = {
   type:
     | "instagram"
-    | "linkedin"
-    | "site"
-    | "youtube"
-    | "forum"
     | "whatsapp"
     | "telegram"
     | "twitter"

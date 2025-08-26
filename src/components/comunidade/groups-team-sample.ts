@@ -5,7 +5,7 @@ export const diversityGroupsAsMembers: GroupMember[] = [
         id: "grp-pcd",
         name: "PCD",
         role: "Inclusão & Acessibilidade",
-        avatar: "/home/juan/Downloads/workspace/hackathon/file.enc",
+        avatar: "src/components/comunidade/file.jpg",
         description: "Foco em acessibilidade digital, tecnologia assistiva e inclusão no mercado.",
         socials: [
             { type: "instagram", url: "https://example.org/acessibilidade" }
@@ -25,7 +25,7 @@ export const diversityGroupsAsMembers: GroupMember[] = [
         id: "grp-afro",
         name: "Afrodescendentes",
         role: "Equidade Racial",
-        avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=60",
+        avatar: "https://thumbs.dreamstime.com/b/animando-uma-estudante-universit%C3%A1ria-africana-americana-com-um-grupo-de-estudantes-africanos-americanos-155695388.jpg",
         description: "Mentoria, representatividade e combate ao viés em processos seletivos.",
         socials: [
             { type: "instagram", url: "https://linkedin.com/company/afrotech" }
