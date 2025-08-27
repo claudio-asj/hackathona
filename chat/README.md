@@ -130,6 +130,42 @@ python run.py
 python run.py
 ```
 
+### Setup Automatizado (Recomendado)
+
+Para configurar todo o ambiente (virtualenv, dependências, criação de `.env`, download antecipado do modelo e opção 8-bit), use o script na raiz do projeto:
+
+```bash
+bash scripts/setup_local_llm.sh
+```
+
+Opções disponíveis:
+
+- `--model <NOME>`: força um modelo (ex: `Qwen/Qwen1.8B-Chat`)
+- `--simple`: usa `requirements_simple.txt` (sem transformers) – útil para apenas API sem geração
+- `--8bit`: tenta instalar `bitsandbytes` e ativa carregamento 8-bit (GPU necessária)
+- `--python <bin>`: especifica binário Python (ex: `python3.11`)
+
+Exemplos:
+```bash
+# Setup padrão
+bash scripts/setup_local_llm.sh
+
+# Modelo específico maior
+bash scripts/setup_local_llm.sh --model Qwen/Qwen1.8B-Chat
+
+# Ambiente leve + 8-bit
+bash scripts/setup_local_llm.sh --simple --8bit --model Qwen/Qwen1.5-0.5B-Chat
+
+# Usando Python 3.11
+bash scripts/setup_local_llm.sh --python python3.11
+```
+
+Depois de rodar:
+```bash
+source .venv/bin/activate
+python chat/run.py
+```
+
 ### Executar em Produção
 ```bash
 gunicorn chat.wsgi:app
